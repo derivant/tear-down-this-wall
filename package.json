@@ -2,9 +2,12 @@
   "name": "tear_down_this_wall",
   "private": true,
   "dependencies": {
+    "@oberon-amsterdam/horizontal": "^1.0.2",
     "@rails/actioncable": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "4.2.2",
+    "aos": "^3.0.0-beta.6",
+    "scrollmagic": "^2.0.7",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",

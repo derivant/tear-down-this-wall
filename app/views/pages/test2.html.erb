@@ -1,0 +1,62 @@
+<nav class="navbar">
+  <div class="menu">Menu</div>
+</nav>
+
+<div id="landing">
+  <div class="inside">
+    <div class="centered">
+      <%= render "shared/logo" %>
+    </div>
+  </div>
+</div>
+<div class="spacer black">
+      <iframe src="https://player.vimeo.com/video/265111898?controlls=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+<div id="pinMaster">
+<div id="pinContainer">
+  <div id="slideContainer">
+    <section class="panel2 blue">
+      <b>ONE</b>
+    </section>
+    <section class="panel2 turqoise">
+      <b>TWO</b>
+    </section>
+    <section class="panel2 green">
+      <b>THREE</b>
+    </section>
+    <section class="panel2 bordeaux">
+      <b>FOUR</b>
+    </section>
+  </div>
+</div>
+  <div class="spacer green"><b>Content</b></div>
+  <div class="spacer brown"><b>Content</b></div>
+  <div id="footer" style=" "><b>Content</b></div>
+</div>
+
+<script>
+  $(function () { // wait for document ready
+    // init
+    var controller = new ScrollMagic.Controller();
+
+    // define movement of panels
+    var wipeAnimation = new TimelineMax()
+      // animate to second panel
+      .to("#slideContainer", 1,   {x: "-25%"})  // move in to first panel
+      // animate to third panel
+      .to("#slideContainer", 1,   {x: "-50%"})
+      // animate to forth panel
+      .to("#slideContainer", 1,   {x: "-75%"})
+
+    // create scene to pin and link animation
+    new ScrollMagic.Scene({
+        triggerElement: "#pinContainer",
+        triggerHook: "onLeave",
+        duration: "500%"
+      })
+      .setPin("#pinContainer")
+      .setTween(wipeAnimation)
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(controller);
+  });
+</script>

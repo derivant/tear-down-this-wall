@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="wrap">
+    <div class="block">
+      <div class="inside">
+        <div class="centered">
+          <%= render "shared/logo" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div id="container" class="block">
+      <div id="block" class="inside black">
+        Hello
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="block">
+      <div class="inside">
+        Hello
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Our code goes here
+
+var controller = new ScrollMagic.Controller();
+
+
+var blockTween = new TweenMax.to('#block', 1.5, {
+    backgroundColor: 'red'
+});
+
+var containerScene = new ScrollMagic.Scene({
+    triggerElement: '#container'
+})
+.setTween(blockTween)
+.addIndicators()
+.addTo(controller);
+
+
+var logoScene = new ScrollMagic.Scene({
+    triggerElement: '#container',
+    duration: 1800
+})
+
+  .setPin('.black')
+  .addIndicators()
+  .addTo(controller);
+
+</script>
+
