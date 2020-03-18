@@ -1,0 +1,63 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+// @font-face {
+//   font-family: "NeueHaasGrotesk";
+//   src: url(asset-path('NeueHaasGrotesk-Roman.woff') format("woff"));
+//   src: font-url('NeueHaasGrotesk-Roman.woff?#iefix') format('embedded-opentype'),
+//        font-url('NeueHaasGrotesk-Roman.woff') format('woff'),
+//        font-url('NeueHaasGrotesk-Roman.ttf') format('truetype')
+// }
+// $my-font: "NHG-Roman";
+h1 {
+font-family: NeueHaasGrotesk;
+font-style: normal;
+font-weight: normal;
+font-size: 5.5em;
+line-height: 1.1em;
+color: #000000;
+
+margin: 0;
+}
+
+h2 {
+font-family: FreePixel;
+font-style: normal;
+font-weight: normal;
+font-size: 3em;
+line-height: 1.1em;
+text-transform: uppercase;
+color: #000000;
+
+margin: 0;
+}
+
+p {
+font-family: NeueHaasGrotesk;
+font-style: normal;
+font-weight: normal;
+font-size: 3.5em;
+line-height: 1.1em;
+
+color: #000000;
+
+margin: 0;
+}
+
+@font-face {
+  font-family: "NeueHaasGrotesk";
+  src: font-url('NeueHaasGrotesk/NeueHaasGrotesk-Roman.eot');
+  src: font-url('NeueHaasGrotesk/NeueHaasGrotesk-Roman.eot?#iefix') format('embedded-opentype'),
+       font-url('NeueHaasGrotesk/NeueHaasGrotesk-Roman.woff') format('woff'),
+       font-url('NeueHaasGrotesk/NeueHaasGrotesk-Roman.ttf') format('truetype');
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "FreePixel";
+  src: font-url('FreePixel/FreePixel-Regular.eot');
+  src: font-url('FreePixel/FreePixel-Regular.eot?#iefix') format('embedded-opentype'),
+       font-url('FreePixel/FreePixel-Regular.woff') format('woff'),
+       font-url('FreePixel/FreePixel-Regular.ttf') format('truetype');
+  font-weight: medium;
+}

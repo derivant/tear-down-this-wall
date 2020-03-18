@@ -1,37 +1,143 @@
-<nav class="navbar">
-  <div class="menu">Menu</div>
-</nav>
+<div class="navbar toggle">
+  <div class="menu-style">
+    <a>Menu</a>
+  </div>
+</div>
+
+<div id="menu-open">
+  <div class="menu-style menu ">
+    <a class="toggle">Close</a>
+    <a href="#video"> Case Video</a>
+    <a href="#history" rel="no-refresh"> Relive History</a>
+    <a href="#material" rel="no-refresh"> Request Material</a>
+    <a href="#about" rel="no-refresh"> About & Contact</a>
+    <a href="#landing" rel="no-refresh" class="front menu">FRONT</a>
+  </div>
+
+</div>
 
 <div id="landing">
   <div class="inside">
-    <div class="centered">
+    <iframe class="iframe" style="z-index: -1;"src="https://player.vimeo.com/video/265111898?background=1" width="360" height="640" frameborder="0" webkitallowfullscreen="" mozallowfullscreen=""></iframe>
+  </div>
+      <div class="centered">
       <%= render "shared/logo" %>
     </div>
-  </div>
-</div>
-<div class="spacer black">
-      <iframe src="https://player.vimeo.com/video/265111898?controlls=0" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 </div>
 <div id="pinMaster">
 <div id="pinContainer">
   <div id="slideContainer">
-    <section class="panel2 blue">
-      <b>ONE</b>
+    <section class="panel-1 one">
+      <div id="history"></div>
+      <div class="panel-container">
+
+        <div>
+          <div class="title">
+            <h1>teARing <br> Berlin apart</h1>
+          </div>
+          <div class="text">
+            <p>The Berlin Wall separated East and West Germany from 1961 to 1989.
+            The wall fell when tens of thousands of East German citizens gathered in civil protest demanding to be let through.
+            </p>
+          </div>
+        </div>
+          <div class="image-berlin"  style="background-image: url(<%= image_url "Henri-Cartier-Bresson.jpg"%>)"></div>
+      </div>
+
+      <div class="panel-container">
+        <div>
+          <div class="title">
+            <h1>Take learning <br>to a new reality</h1>
+          </div>
+          <div class="text">
+            <p>With TeAR down this WALL, students can explore and tear down the wall in Augmented Reality — setting a foot in history through the newest technology. The experience is pre-built in Minecraft Earth – a free app for iOS and Android phones.
+            </p>
+          </div>
+        </div>
+        <div class="image-berlin" style="background-image: url(<%= image_url "Henri-Cartier-Bresson.jpg"%>)"></div>
+
+      </div>
+
     </section>
-    <section class="panel2 turqoise">
-      <b>TWO</b>
+    <section class="panel two">
+      <div class="panel-container-2">
+        <div class="title">
+          <p>“Minecraft Earth brings the hugely popular game from computer screens to the physical world, where players can place structures in the physical world through their phones.”</p>
+        </div>
+      </div>
     </section>
-    <section class="panel2 green">
-      <b>THREE</b>
-    </section>
-    <section class="panel2 bordeaux">
-      <b>FOUR</b>
+    <section class="panel three">
+      <div class="panel-container">
+        <div class="title">
+          <h1>Forget the past, and you’re doomed to repeat it.</h1>
+        </div>
+          <div class="quote">
+          <h2>A third of Germans have no recollection of the Berlin Wall — and no way to imagine it could happen again. But border walls are coming back: Half of them built after 2000.</h2>
+        </div>
+          <div class="text">
+          <p>So we wanted to show the new generation the full scale of the Berlin Wall. In the Augmented Reality of Minecraft Earth.</p>
+        </div>
     </section>
   </div>
 </div>
-  <div class="spacer green"><b>Content</b></div>
-  <div class="spacer brown"><b>Content</b></div>
-  <div id="footer" style=" "><b>Content</b></div>
+
+  <div class="video">
+      <style>
+        .embed-container { position: relative; padding-bottom: 56.25%; padding-top: 0px; margin-top: 0px; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+      </style>
+      <div class='embed-container'>
+        <iframe src='https://player.vimeo.com/video/391525572' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen>
+        </iframe>
+      </div>
+  </div>
+
+  <div id="material" class="spacer submit">
+    <div class="submit-container">
+      <div class="lockup"><%= render "shared/lockup" %></div>
+      <div class="submit-info">
+        <h2>AN EDUCATIONAL TOOL TO EXPERIENCE HISTORY THROUGHT MODERN DAY TECHNOLOGY</h2>
+      </div>
+
+      <div class="submit-form">
+        <div class="submit-text">
+          <h1>Request access  to educational material:</h1>
+        </div>
+        <div class="submit-fill">
+          <form method="post">
+          <input type="text" placeholder="NAME">
+          <input type="text" placeholder="SCHOOL">
+          <input type="text" placeholder="EMAIL">
+          <input type="submit" value="Submit →">
+        </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="spacer about">
+    <div class="about-container">
+      <div class="about-head">
+        About <br> & Contact
+      </div>
+      <div class="about-title">
+        <h1>Try it yourself</h1>
+      </div>
+      <div class="about-text">
+        <p>Teachers can sign in for access to free teaching materials on The Berlin Wall and its role in both European History and current politics.
+The five-module course is made for students in grades 6-9 and comes with a pre-built world for the students to explore.
+</p>
+      </div>
+
+      <div class="about-title">
+        <h1>Press & Contact</h1>
+      </div>
+      <div class="about-text">
+        <p>Curious? Want to collaborate? Questions about the project? <br>
+            Reach out at <u>email@email.com</u> and we will get back to you shortly.</p>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <script>
@@ -52,11 +158,63 @@
     new ScrollMagic.Scene({
         triggerElement: "#pinContainer",
         triggerHook: "onLeave",
-        duration: "500%"
+        duration: "300%"
       })
       .setPin("#pinContainer")
       .setTween(wipeAnimation)
       .addIndicators() // add indicators (requires plugin)
       .addTo(controller);
   });
+</script>
+
+<script>
+
+$(function()
+{
+     $(".toggle").click(function()
+     {
+         $("#menu-open").slideToggle(600, "swing");
+         return false;
+     });
+});
+
+</script>
+
+<script>
+  var min_w = 600; // minimum video width allowed
+var vid_w_orig;  // original video dimensions
+var vid_h_orig;
+
+jQuery(function() { // runs after DOM has loaded
+
+    vid_w_orig = parseInt(jQuery('iframe').attr('width'));
+    vid_h_orig = parseInt(jQuery('iframe').attr('height'));
+
+    jQuery(window).resize(function () { resizeToCover(); });
+    jQuery(window).trigger('resize');
+});
+
+function resizeToCover() {
+
+    // set the video viewport to the window size
+    jQuery('.inside').width(jQuery(window).width());
+    jQuery('.inside').height(jQuery(window).height());
+
+    // use largest scale factor of horizontal/vertical
+    var scale_h = jQuery(window).width() / vid_w_orig;
+    var scale_v = jQuery(window).height() / vid_h_orig;
+    var scale = scale_h > scale_v ? scale_h : scale_v;
+
+    // don't allow scaled width < minimum video width
+    if (scale * vid_w_orig < min_w) {scale = min_w / vid_w_orig;};
+
+    // now scale the video
+    jQuery('.iframe').width(scale * vid_w_orig);
+    jQuery('.iframe').height(scale * vid_h_orig);
+    // and center it by scrolling the video viewport
+    jQuery('.inside').scrollLeft((jQuery('.iframe').width() - jQuery(window).width()) / 2);
+    jQuery('.inside').scrollTop((jQuery('.iframe').height() - jQuery(window).height()) / 2);
+
+
+};
 </script>
